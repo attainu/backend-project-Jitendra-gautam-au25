@@ -1,0 +1,251 @@
+<% include ../partials/header%>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1 class="display-3" style="font-weight: 500;">Welcome to JN Book Store</h1>
+            <p>View our hand-picked collection of books from various sourcesss</p>
+        </div>
+    </header>
+    <div class="row text-center">
+        <%bestSellings.forEach(function(bestSelling){%>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <div class="space">
+                    <div class="card bg-light">
+                        <img src="http://books.google.com/books/content?id=8olDDwAAQBAJ&amp;printsec=frontcover&amp;img=1&amp;zoom=1&amp;edge=curl&amp;source=gbs_api" class="card-img-top-xs" alt="">
+                        <div class="card-body">
+                                <h6 class="card-title font-weight-bold"><%=bestSelling.title%></h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <p>
+                                        <strong>Author: </strong><em>Robert</em>
+                                        <br>
+                                        <strong style="color:black;">Price: </strong>200
+                                    </p>
+                                    <div>
+                                        <span class="badge label-primary"><i class="fas fa-thumbs-up"></i> <%= bestSelling.likes.length %></span>
+                                    </div>
+                                <li class="list-group-item">
+                                    <a style="float: left" href="/bestselling/<%=bestSelling._id%>" class="btn btn-xs btn-primary">More</a>
+                                    <!-- Add to cart functionality and then redirect to the cart page -->
+                                    <a style="float:right" href="/add-to-cart/<%=bestSelling._id%>" class="btn btn-xs btn-success"> Add to Cart</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%});%>
+    </div>
+    <div class="col-12 col-md-4 col-lg-3">
+        <div class="card mb-2">
+            <img class="card-img-top" src="public/images/newbook1.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title font-weight-bold">Rech Dad Poor Dad</h6>
+                <p class="card-text">
+                    <strong>Author: </strong>Robert Kiyosaki<br><strong>Price:
+                    </strong>250
+                </p>
+                <div class="text-center">
+                    <span class="badge label-primary"><i class="fas fa-thumbs-up"></i>
+                        0</span>
+                </div>
+                <div class="best-selling-buttons">
+
+                    <a href="/bestselling/5d35697385eb7a2fe873b2d0" class="btn btn-primary btn-md btn-rounded">More</a>
+                    <a href="/bestselling/add-to-cart/5d35697385eb7a2fe873b2d0" class="btn btn-success btn-md btn-rounded">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-4 col-lg-3">
+        <div class="card mb-2">
+            <img class="card-img-top" src="public/images/newbook2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title font-weight-bold">You Are The Chief Executive Decision Maker In Your Life…Take Action Now</h6>
+                <p class="card-text">
+                    <strong>Author: </strong>Antono Robin<br><strong>Price:
+                    </strong>350
+                </p>
+                <div class="text-center">
+                    <span class="badge label-primary"><i class="fas fa-thumbs-up"></i>
+                        0</span>
+                </div>
+                <div class="best-selling-buttons">
+
+                    <a href="/bestselling/5d35697385eb7a2fe873b2d0" class="btn btn-primary btn-md btn-rounded">More</a>
+                    <a href="/bestselling/add-to-cart/5d35697385eb7a2fe873b2d0" class="btn btn-success btn-md btn-rounded">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-3">
+        <div class="card mb-2">
+            <img class="card-img-top" src="public/images/newbook3.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title font-weight-bold">Motivational Quotes Book</h6>
+                <p class="card-text">
+                    <strong>Author: </strong>James Smith<br><strong>Price:
+                    </strong>320
+                </p>
+                <div class="text-center">
+                    <span class="badge label-primary"><i class="fas fa-thumbs-up"></i>
+                        0</span>
+                </div>
+                <div class="best-selling-buttons">
+
+                    <a href="/bestselling/5d35697385eb7a2fe873b2d0" class="btn btn-primary btn-md btn-rounded">More</a>
+                    <a href="/bestselling/add-to-cart/5d35697385eb7a2fe873b2d0" class="btn btn-success btn-md btn-rounded">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-3">
+        <div class="card mb-2">
+            <img class="card-img-top" src="public/images/newbook4.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title font-weight-bold">You Can Do It</h6>
+                <p class="card-text">
+                    <strong>Author: </strong>Ivan king<br><strong>Price:
+                    </strong>280
+                </p>
+                <div class="text-center">
+                    <span class="badge label-primary"><i class="fas fa-thumbs-up"></i>
+                        0</span>
+                </div>
+                <div class="best-selling-buttons">
+
+                    <a href="/bestselling/5d35697385eb7a2fe873b2d0" class="btn btn-primary btn-md btn-rounded">More</a>
+                    <a href="/bestselling/add-to-cart/5d35697385eb7a2fe873b2d0" class="btn btn-success btn-md btn-rounded">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4 col-lg-3">
+        <div class="card mb-2">
+            <img class="card-img-top" src="public/images/newbook5.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title font-weight-bold">Think and Grow Rich</h6>
+                <p class="card-text">
+                    <strong>Author: </strong>Napolean Hill<br><strong>Price:
+                    </strong>450
+                </p>
+                <div class="text-center">
+                    <span class="badge label-primary"><i class="fas fa-thumbs-up"></i>
+                        0</span>
+                </div>
+                <div class="best-selling-buttons">
+
+                    <a href="/bestselling/5d35697385eb7a2fe873b2d0" class="btn btn-primary btn-md btn-rounded">More</a>
+                    <a href="/bestselling/add-to-cart/5d35697385eb7a2fe873b2d0" class="btn btn-success btn-md btn-rounded">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="col-12 col-md-4 col-lg-3">
+        <div class="card mb-2">
+            <img class="card-img-top" src="public/images/newbook7.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title font-weight-bold">365 days Of Positive Thinking</h6>
+                <p class="card-text">
+                    <strong>Author: </strong>Jenny Kellett<br><strong>Price:
+                    </strong>550
+                </p>
+                <div class="text-center">
+                    <span class="badge label-primary"><i class="fas fa-thumbs-up"></i>
+                        0</span>
+                </div>
+                <div class="best-selling-buttons">
+
+                    <a href="/bestselling/5d35697385eb7a2fe873b2d0" class="btn btn-primary btn-md btn-rounded">More</a>
+                    <a href="/bestselling/add-to-cart/5d35697385eb7a2fe873b2d0" class="btn btn-success btn-md btn-rounded">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="col-12 col-md-4 col-lg-3">
+        <div class="card mb-2">
+            <img class="card-img-top" src="public/images/newbook8.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title font-weight-bold">Be A Network Marketing Millionier</h6>
+                <p class="card-text">
+                    <strong>Author: </strong>DEEPAK BAJAJ<br><strong>Price:
+                    </strong>258
+                </p>
+                <div class="text-center">
+                    <span class="badge label-primary"><i class="fas fa-thumbs-up"></i>
+                        0</span>
+                </div>
+                <div class="best-selling-buttons">
+
+                    <a href="/bestselling/5d35697385eb7a2fe873b2d0" class="btn btn-primary btn-md btn-rounded">More</a>
+                    <a href="/bestselling/add-to-cart/5d35697385eb7a2fe873b2d0" class="btn btn-success btn-md btn-rounded">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="col-12 col-md-4 col-lg-3">
+        <div class="card mb-2">
+            <img class="card-img-top" src="public/images/newbook9.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title font-weight-bold"> FIRE OF MOTIVATION</h6>
+                <p class="card-text">
+                    <strong>Author: </strong>Sandeep Maheshwari<br><strong>Price:
+                    </strong>250
+                </p>
+                <div class="text-center">
+                    <span class="badge label-primary"><i class="fas fa-thumbs-up"></i>
+                        0</span>
+                </div>
+                <div class="best-selling-buttons">
+
+                    <a href="/bestselling/5d35697385eb7a2fe873b2d0" class="btn btn-primary btn-md btn-rounded">More</a>
+                    <a href="/bestselling/add-to-cart/5d35697385eb7a2fe873b2d0" class="btn btn-success btn-md btn-rounded">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="col-12 col-md-4 col-lg-3">
+        <div class="card mb-2">
+            <img class="card-img-top" src="public/images/newbook10.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h6 class="card-title font-weight-bold">Learning How To Fly - Life Lessons for the Youth</h6>
+                <p class="card-text">
+                    <strong>Author: </strong>Dr. A.P.J ABDUL KALAM<br><strong>Price:
+                    </strong>146
+                </p>
+                <div class="text-center">
+                    <span class="badge label-primary"><i class="fas fa-thumbs-up"></i>
+                        0</span>
+                </div>
+                <div class="best-selling-buttons">
+
+                    <a href="/bestselling/5d35697385eb7a2fe873b2d0" class="btn btn-primary btn-md btn-rounded">More</a>
+                    <a href="/bestselling/add-to-cart/5d35697385eb7a2fe873b2d0" class="btn btn-success btn-md btn-rounded">Add to Cart</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        
+        
+
+</div>
+
+<% include ../partials/footer%>

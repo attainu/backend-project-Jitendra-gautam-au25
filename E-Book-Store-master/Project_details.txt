@@ -1,0 +1,26 @@
+We are designing a web application where we can  see many types of books and we can buy books when we are logged in.
+What are we trying to build?
+
+USER 
+Users can find books of different category, he/she can add books to cart and remove books and place order for required books.
+
+ADMIN
+Admin can view orders, books, number of users. Can update, delete, add,   
+books . Admin can able to see the contact queries provided by users.
+
+Technologies used and why?
+
+-FRONTEND
+HTML|CSS|JAVASCRIPT(to add functionality to html pages)|BOOTSTRAP ( Bootstrap is a framework helps us to design faster and easier frontend things . ).
+
+-BACKEND
+Express (Server side framework which gives more security from unwanted insertion of links, It makes easier routing and it helps in fast web development).
+MongoDb is a Non relational database for storing large data.
+HBS (Handlebar Templates) to render data in html pages for frontend usage.
+Cloudinary for storing images.
+
+-PACKAGES AND MODULES
+Express, Bodyparser, Express-session, hbs, Multer
+
+-DEPLOYMENT
+Heroku, Mongodb Atlas, Cloudinary

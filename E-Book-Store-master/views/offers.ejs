@@ -1,0 +1,96 @@
+<% include ./partials/header%>
+<section class="about-image">
+    <img src="../public/images/contact/offers" class="img-responsive" alt="About Us" title="About Us">
+</section>
+<div class="offers-page">
+    <div class="container">
+        <h2>
+            33% Each Books <br>Regular offer
+        </h2>
+        <div class="coupon">
+            <div class="container">
+              <h3>Company Logo</h3>
+            </div>
+            <img src="public/images/newbook11.jpg" alt="Avatar" style="width:100%;">
+            <div class="container" style="background-color:white">
+              <h2><b>20% OFF YOUR SECOND PURCHASE</b></h2>
+              <p>HURRY UPPPPP.....</p>
+            </div>
+            <div class="container">
+              <p>Use Promo Code: <span class="promo">BOH232</span></p>
+              <p class="expire">Expires: MARCH 20, 2022</p>
+            </div>
+          </div>
+    </div>
+</div>
+
+<style>.coupon {
+    border: 5px dotted #bbb; /* Dotted border */
+    width: 50%;
+    border-radius: 10px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 300px;
+  }
+  
+  .container {
+    padding: 2px 10px;
+    
+  }
+  
+  .promo {
+    background: #ccc;
+    padding: 3px;
+  }
+  </style>
+
+<script>
+    function initMap() {
+        //MAP OPTIONS
+        var options = {
+            zoom: 8,
+            center: {
+                lat: 28.7041,
+                lng: 77.1025,
+            }
+        };
+        //NEW MAP
+        var map = new google.maps.Map(document.getElementById('map'), options);
+
+        var markers = [
+            {
+                coords: { lat: 28.715770, lng: 77.176491 },
+                content: "<h4>E-book Store</h4>"
+            }
+        ];
+        for (var i = 0; i < markers.length; i++) {
+            addMarker(markers[i]);
+        }
+
+        //ADD MARKER FUNCTION
+        function addMarker(props) {
+            var marker = new google.maps.Marker({
+                position: props.coords,
+                map: map,
+                // icon:'';    We can chnage the icon of the marker using this wherein we need to provide a link to the image 
+            });
+            if (props.content) {
+                var infoWindow = new google.maps.InfoWindow({
+                    content: props.content
+                });
+                marker.addListener("click", function () {
+                    infoWindow.open(map, marker);
+                });
+            }
+        }
+
+
+    }
+
+
+    
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQJbML2d8XY-eRNk1-icAXZ7sBdnj_XCs&callback=initMap"></script>
+
+
+<% include ./partials/footer%>
